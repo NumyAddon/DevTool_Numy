@@ -1,3 +1,12 @@
+## Credits
+
+DevTool_Numy is a continuation of [*DevTool*](https://github.com/brittyazel/DevTool) by Britt Yazel, Ph.D. with permission.
+DevTool in turn was a continuation of the amazing [*ViragDevTool*](https://github.com/varren/ViragDevTool) addon started by
+Varren/Virag for World of Warcraft: Battle for Azeroth and prior. All credit for the idea and the work done prior to
+2021 should go to him, accordingly.
+
+---
+
 # DevTool
 
 DevTool is a multipurpose tool to assist with World of Warcraft addon development.
@@ -80,7 +89,7 @@ be in the form of a `string`, `number`, `nil`, `boolean`, and/or `table`.
 
 - **Note**, _to pass a value with type `table` you have to specify prefix `t=`_.
 - **Note**, _to pass the parent table, specify `t=self`_.
-- **Note**, _DevTool will automatically try passing `self` as first arg, if the function throws an error_.
+- **Note**, _DevTool will automatically try passing `self` as the first arg, if the function throws an error_.
 
 Example passing arguments to a function `SomeFunction`:
 
@@ -91,6 +100,7 @@ Example passing arguments to a function `SomeFunction`:
 ### Chat commands:
 
 - `/dev` - toggles the main UI window
+- `/dev dump <value>` - Evaluates the value as code, and adds the result to the window
 - `/dev help` - Lists help actions in the chat window
 - `/dev <command>` - Will execute one of the commands listed in the help menu
 
@@ -109,20 +119,5 @@ Example passing arguments to a function `SomeFunction`:
 
 ## Want to contribute?
 
-* [Report Bugs and Request Features](https://github.com/brittyazel/DevTool/issues)
-* [Source Code](https://github.com/brittyazel/DevTool)
-
----
-
-## Want to Donate?
-
-Making add-ons is a lot of work! Your help goes a huge way to making my add-on work possible. If you would like to
-Donate, [GitHub Sponsors](https://github.com/sponsors/brittyazel) is the preferred method.
-
----
-
-## Credits:
-
-DevTool is a continuation of the amazing [*ViragDevTool*](https://github.com/varren/ViragDevTool) addon started by
-Varren/Virag for World of Warcraft: Battle for Azeroth and prior. All credit for the idea and the work done prior to
-2021 should go to him, accordingly.
+* [Report Bugs and Request Features](https://github.com/NumyAddon/DevTool_Numy/issues)
+* [Source Code](https://github.com/NumyAddon/DevTool_Numy)

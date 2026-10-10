@@ -7,9 +7,9 @@
 https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI_shared.xsd">
 
     <!--FONTS -->
-    <Font name="DevToolDefaultFont" inherits="SystemFont_Small" justifyH="LEFT"/>
-    <Font name="DevToolMediumFont" inherits="SystemFont_Med1" justifyH="LEFT" virtual="true"/>
-    <Texture name="DevToolStrokeTexture" virtual="true">
+    <Font name="DevTool_Numy_DefaultFont" inherits="SystemFont_Small" justifyH="LEFT"/>
+    <Font name="DevTool_Numy_MediumFont" inherits="SystemFont_Med1" justifyH="LEFT" virtual="true"/>
+    <Texture name="DevTool_Numy_StrokeTexture" virtual="true">
         <Color r="0.1" g="0.1" b="0.1" a="1"/>
     </Texture>
 
@@ -18,7 +18,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI
      *********************************************************************************************************-->
 
     <!--FRAME -->
-    <Frame name="DevToolFrameTemplate" virtual="true">
+    <Frame name="DevTool_Numy_FrameTemplate" virtual="true">
         <Layers>
             <Layer>
                 <Texture>
@@ -68,7 +68,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI
     </Frame>
 
 
-    <Slider name="DevToolMinimalHybridScrollBarTemplate" parentKey="scrollBar" virtual="true">
+    <Slider name="DevTool_Numy_MinimalHybridScrollBarTemplate" parentKey="scrollBar" virtual="true">
         <Size x="22" y="0"/>
         <Frames>
             <Button name="$parentScrollUpButton" inherits="UIPanelScrollUpButtonTemplate">
@@ -101,7 +101,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI
     </Slider>
 
     <!--SCROLL FRAME -->
-    <ScrollFrame name="DevToolScrollFrameTemplate" inherits="HybridScrollFrameTemplate" virtual="true">
+    <ScrollFrame name="DevTool_Numy_ScrollFrameTemplate" inherits="HybridScrollFrameTemplate" virtual="true">
         <Anchors>
             <Anchor point="RIGHT" x="-27"/>
             <Anchor point="LEFT" x="5"/>
@@ -112,7 +112,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI
             </OnLoad>
         </Scripts>
         <Frames>
-            <Slider name="$parentScrollBar" inherits="DevToolMinimalHybridScrollBarTemplate">
+            <Slider name="$parentScrollBar" inherits="DevTool_Numy_MinimalHybridScrollBarTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativePoint="TOPRIGHT" y="-18"/>
                     <Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" y="16"/>
@@ -133,7 +133,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI
     </ScrollFrame>
 
     <!--BUTTON -->
-    <Button name="DevToolBaseButtonTemplate" virtual="true">
+    <Button name="DevTool_Numy_BaseButtonTemplate" virtual="true">
         <Layers>
             <Layer level="BACKGROUND">
                 <Texture>
@@ -154,7 +154,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI
         </HighlightTexture>
     </Button>
 
-    <CheckButton name="DevToolButtonTemplate" inherits="DevToolBaseButtonTemplate" virtual="true">
+    <CheckButton name="DevTool_Numy_ButtonTemplate" inherits="DevTool_Numy_BaseButtonTemplate" virtual="true">
         <Size x="100" y="25"/>
         <NormalFont style="GameFontHighlight"/>
         <CheckedTexture name="$parentChecked" file="Interface\ClassTrainerFrame\TrainerTextures" alphaMode="ADD">
@@ -163,7 +163,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI
     </CheckButton>
 
     <!--EDITBOX -->
-    <EditBox name="DevToolEditBoxTemplate" virtual="true">
+    <EditBox name="DevTool_Numy_EditBoxTemplate" virtual="true">
         <Size y="25"/>
         <Layers>
             <Layer>
@@ -181,7 +181,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI
     </EditBox>
 
     <!--COLUMN FOR MAIN HybridScrollFrameTemplate -->
-    <Button text="Test" name="DevToolColumnTemplate" virtual="true">
+    <Button text="Test" name="DevTool_Numy_ColumnTemplate" virtual="true">
         <Size x="42"/>
         <Anchors>
             <Anchor point="TOP"/>
@@ -201,11 +201,11 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI
                 self:GetParent():UnlockHighlight()
             </OnLeave>
         </Scripts>
-        <NormalFont style="DevToolDefaultFont"/>
+        <NormalFont style="DevTool_Numy_DefaultFont"/>
     </Button>
 
     <!--ROW BASE HybridScrollFrameTemplate -->
-    <Button name="DevToolRowTemplate" virtual="true">
+    <Button name="DevTool_Numy_RowTemplate" virtual="true">
         <Anchors>
             <Anchor point="RIGHT"/>
             <Anchor point="LEFT"/>
@@ -229,7 +229,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI
     </Button>
 
     <!--ROW FOR SIDEBAR HybridScrollFrameTemplate -->
-    <Button name="DevToolSideBarRowTemplate" inherits="DevToolRowTemplate" virtual="true">
+    <Button name="DevTool_Numy_SideBarRowTemplate" inherits="DevTool_Numy_RowTemplate" virtual="true">
         <Size y="18"/>
         <Frames>
             <!--COLUMN 1 delete item icon -->
@@ -244,37 +244,37 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI
                 <HighlightTexture file="Interface/BUTTONS/UI-Panel-MinimizeButton-Highlight" alphaMode="ADD"/>
             </Button>
             <!--COLUMN 2 item text -->
-            <Button text="Test" name="$parentMainButton" inherits="DevToolColumnTemplate" parentKey="mainButton">
+            <Button text="Test" name="$parentMainButton" inherits="DevTool_Numy_ColumnTemplate" parentKey="mainButton">
                 <Anchors>
                     <Anchor point="RIGHT"/>
                     <Anchor point="LEFT" relativeTo="$parentActionButton" relativePoint="RIGHT"/>
                 </Anchors>
-                <NormalFont style="DevToolMediumFont"/>
+                <NormalFont style="DevTool_Numy_MediumFont"/>
             </Button>
         </Frames>
     </Button>
 
     <!--ROW FOR MAIN HybridScrollFrameTemplate -->
-    <Button name="DevToolEntryTemplate" inherits="DevToolRowTemplate" virtual="true">
+    <Button name="DevTool_Numy_EntryTemplate" inherits="DevTool_Numy_RowTemplate" virtual="true">
         <Size y="7"/>
         <Frames>
             <!--COLUMN 1-->
-            <Button text="123456" name="$parentCountColumn" inherits="DevToolColumnTemplate"
+            <Button text="123456" name="$parentCountColumn" inherits="DevTool_Numy_ColumnTemplate"
                     parentKey="rowNumberButton">
                 <Anchors>
                     <Anchor point="LEFT" x="5"/>
                 </Anchors>
             </Button>
             <!--COLUMN 2-->
-            <Button text="Test Text" name="$parentNameColumn" inherits="DevToolColumnTemplate"
+            <Button text="Test Text" name="$parentNameColumn" inherits="DevTool_Numy_ColumnTemplate"
                     parentKey="nameButton">
                 <Anchors>
                     <Anchor point="LEFT" relativeTo="$parentCountColumn" relativePoint="RIGHT"/>
-                    <Anchor point="RIGHT" relativeTo="DevToolFrameColumnResizeButton" relativePoint="LEFT" x="10"/>
+                    <Anchor point="RIGHT" relativeTo="DevTool_Numy_FrameColumnResizeButton" relativePoint="LEFT" x="10"/>
                 </Anchors>
             </Button>
             <!--COLUMN 3-->
-            <Button text="Test Text" name="$parentValueColumn" inherits="DevToolColumnTemplate"
+            <Button text="Test Text" name="$parentValueColumn" inherits="DevTool_Numy_ColumnTemplate"
                     parentKey="valueButton">
                 <Anchors>
                     <Anchor point="RIGHT"/>
@@ -289,7 +289,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI
                                                          MAIN UI
      *********************************************************************************************************-->
 
-    <Frame name="DevToolMainFrame" inherits="DevToolFrameTemplate" hidden="true" movable="true"
+    <Frame name="DevTool_Numy_MainFrame" inherits="DevTool_Numy_FrameTemplate" hidden="true" movable="true"
            toplevel="true" resizable="true" virtual="true">
         <Size x="750" y="500"/>
         <Anchors>
@@ -345,7 +345,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI
             </Button>
 
             <!--LABEL FOR FUNCTION ARGUMENTS-->
-            <Button text="Arguments:" inherits="DevToolButtonTemplate" name="$parentFNCallLabelButton"
+            <Button text="Arguments:" inherits="DevTool_Numy_ButtonTemplate" name="$parentFNCallLabelButton"
                     parentKey="clearFnArgsButton">
                 <Anchors>
                     <Anchor point="BOTTOMLEFT" y="5" x="5"/>
@@ -361,7 +361,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI
             </Button>
 
             <!--FUNCTION ARGUMENTS EDITBOX-->
-            <EditBox name="$parentTextArea" inherits="DevToolEditBoxTemplate" autoFocus="false"
+            <EditBox name="$parentTextArea" inherits="DevTool_Numy_EditBoxTemplate" autoFocus="false"
                      parentKey="editbox">
                 <Anchors>
                     <Anchor point="RIGHT" relativeTo="$parentResizeButton" relativePoint="LEFT" x="-14"/>
@@ -398,7 +398,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI
             </Button>
 
             <!--CLEAR BUTTON -->
-            <Button text="Clear" name="$parentClearButton" inherits="DevToolButtonTemplate">
+            <Button text="Clear" name="$parentClearButton" inherits="DevTool_Numy_ButtonTemplate">
                 <Anchors>
                     <Anchor point="LEFT" relativeTo="$parentToggleSideBarButton" relativePoint="RIGHT" x="5"/>
                 </Anchors>
@@ -410,7 +410,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI
             </Button>
 
             <!--_G BUTTON -->
-            <Button text="_G" name="$parentAddGlobalButton" inherits="DevToolButtonTemplate">
+            <Button text="_G" name="$parentAddGlobalButton" inherits="DevTool_Numy_ButtonTemplate">
                 <Anchors>
                     <Anchor point="LEFT" relativeTo="$parentClearButton" relativePoint="RIGHT" x="5"/>
                 </Anchors>
@@ -422,14 +422,14 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI
             </Button>
 
             <!--SHOW FRAME STACK BUTTON -->
-            <Button text="/fstack" name="$parentFrameStack" inherits="DevToolButtonTemplate">
+            <Button text="/fstack" name="$parentFrameStack" inherits="DevTool_Numy_ButtonTemplate">
                 <Anchors>
                     <Anchor point="LEFT" relativeTo="$parentAddGlobalButton" relativePoint="RIGHT" x="5"/>
                 </Anchors>
                 <Scripts>
                     <OnClick>
                         self.isActive = not self.isActive
-                        UIParentLoadAddOn("Blizzard_DebugTools");
+                        C_AddOns.LoadAddOn("Blizzard_DebugTools");
                         local showHidden = false; -- todo add this functionality
                         local showRegions = false;
                         FrameStackTooltip_Toggle(showHidden, showRegions);
@@ -438,20 +438,21 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI
             </Button>
 
             <!--SHOW EVENT TRACE BUTTON -->
-            <Button text="/etrace" name="$parentEventTrace" inherits="DevToolButtonTemplate">
+            <Button text="/etrace" name="$parentEventTrace" inherits="DevTool_Numy_ButtonTemplate">
                 <Anchors>
                     <Anchor point="LEFT" relativeTo="$parentFrameStack" relativePoint="RIGHT" x="5"/>
                 </Anchors>
                 <Scripts>
                     <OnClick>
-                        self.isActive = not self.isActive
-                        UIParentLoadAddOn("Blizzard_EventTrace");
+                        self.isActive = not self.isActive;
+                        C_AddOns.LoadAddOn("Blizzard_EventTrace");
+                        EventTrace:SetShown(self.isActive);
                     </OnClick>
                 </Scripts>
             </Button>
 
             <!--HELP BUTTON -->
-            <Button text="Help" name="$parentHelpButton" inherits="DevToolButtonTemplate">
+            <Button text="Help" name="$parentHelpButton" inherits="DevTool_Numy_ButtonTemplate">
                 <Anchors>
                     <Anchor point="LEFT" relativeTo="$parentEventTrace" relativePoint="RIGHT" x="5"/>
                 </Anchors>
@@ -513,7 +514,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI
             </Button>
 
             <!--MAIN SCROLL FRAME-->
-            <ScrollFrame name="$parentScrollFrame" inherits="DevToolScrollFrameTemplate" parentKey="scrollFrame">
+            <ScrollFrame name="$parentScrollFrame" inherits="DevTool_Numy_ScrollFrameTemplate" parentKey="scrollFrame">
                 <Anchors>
                     <Anchor point="TOP" relativeTo="$parentToggleSideBarButton" relativePoint="BOTTOM" y="-5"/>
                     <Anchor point="BOTTOM" relativeTo="$parentFNCallLabelButton" relativePoint="TOP" y="5"/>
@@ -575,7 +576,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI
                                                         SIDEBAR
             *********************************************************************************************************-->
 
-            <Frame name="$parentSideBar" inherits="DevToolFrameTemplate" enableMouse="true" parentKey="sideFrame"
+            <Frame name="$parentSideBar" inherits="DevTool_Numy_FrameTemplate" enableMouse="true" parentKey="sideFrame"
                    hidden="true">
                 <Size x="320"/>
                 <Anchors>
@@ -597,7 +598,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI
                 <Frames>
 
                     <!--HISTORY TAB BUTTON-->
-                    <CheckButton text="/dev history" name="$parentHistoryButton" inherits="DevToolButtonTemplate"
+                    <CheckButton text="/dev history" name="$parentHistoryButton" inherits="DevTool_Numy_ButtonTemplate"
                                  parentKey="history">
                         <Anchors>
                             <Anchor point="TOPLEFT" y="-5" x="5"/>
@@ -610,7 +611,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI
                     </CheckButton>
 
                     <!--EVENTS TAB BUTTON-->
-                    <CheckButton text="Events" name="$parentEventsButton" inherits="DevToolButtonTemplate"
+                    <CheckButton text="Events" name="$parentEventsButton" inherits="DevTool_Numy_ButtonTemplate"
                                  parentKey="events">
                         <Anchors>
                             <Anchor point="LEFT" relativeTo="$parentHistoryButton" relativePoint="RIGHT" x="5"/>
@@ -623,7 +624,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI
                     </CheckButton>
 
                     <!--FUNCTION LOGGER TAB BUTTON-->
-                    <CheckButton text="Fn Call Log" name="$parentLogButton" inherits="DevToolButtonTemplate"
+                    <CheckButton text="Fn Call Log" name="$parentLogButton" inherits="DevTool_Numy_ButtonTemplate"
                                  parentKey="logs">
                         <Anchors>
                             <Anchor point="LEFT" relativeTo="$parentEventsButton" relativePoint="RIGHT" x="5"/>
@@ -636,7 +637,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI
                     </CheckButton>
 
                     <!--SIDEBAR EDITBOX-->
-                    <EditBox name="$parentTextArea" inherits="DevToolEditBoxTemplate" autoFocus="false"
+                    <EditBox name="$parentTextArea" inherits="DevTool_Numy_EditBoxTemplate" autoFocus="false"
                              parentKey="editbox">
                         <Anchors>
                             <Anchor point="BOTTOMLEFT" y="5" x="10"/>
@@ -657,7 +658,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI
                     </EditBox>
 
                     <!--SIDEBAR SCROLL FRAME-->
-                    <ScrollFrame name="$parentScrollFrame" inherits="DevToolScrollFrameTemplate"
+                    <ScrollFrame name="$parentScrollFrame" inherits="DevTool_Numy_ScrollFrameTemplate"
                                  parentKey="sideScrollFrame">
                         <Anchors>
                             <Anchor point="TOP" relativeTo="$parentHistoryButton" relativePoint="BOTTOM" y="-5"/>
